@@ -1,10 +1,12 @@
 package com.example.movies;
 
+import androidx.annotation.NonNull;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class MovieResponce {
+public class MovieResponse {
 
     @SerializedName("docs")
     private List<Movie> movies;
@@ -13,7 +15,15 @@ public class MovieResponce {
         return movies;
     }
 
-    public MovieResponce(List<Movie> movies) {
+    public MovieResponse(List<Movie> movies) {
         this.movies = movies;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "MovieResponce{" +
+                "movies=" + movies +
+                '}';
     }
 }

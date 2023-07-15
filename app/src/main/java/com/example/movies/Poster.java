@@ -1,18 +1,27 @@
 package com.example.movies;
 
+import androidx.annotation.NonNull;
+
 import com.google.gson.annotations.SerializedName;
 
 public class Poster {
 
-    public String getURL() {
-        return URL;
+    public String getUrl() {
+        return url;
     }
 
-    public Poster(String URL) {
-        this.URL = URL;
+    public Poster(String url) {
+        this.url = url;
     }
-    @SerializedName("URL")
-    private String URL;
+    @SerializedName("url")
+    private String url;
 
 
+    @NonNull
+    @Override
+    public String toString() {
+        return "Poster{" +
+                "url='" + url + '\'' +
+                '}';
+    }
 }
