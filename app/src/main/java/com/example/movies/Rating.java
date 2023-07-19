@@ -21,6 +21,8 @@ public class Rating {
     }
 
     public String getKp() {
+        Double newKp = Double.parseDouble(kp);
+        kp = String.format("%.1f", newKp);
         return kp;
     }
 }
